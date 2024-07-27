@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Order</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Product Order Form</h1>
+      <table id="productTable">
+        <thead>
+          <tr>
+            <th>Product Name</th>
+            <th>Quantity</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="product-row">
+            <td>
+              <div class="dropdown product-dropdown">
+                <button class="dropbtn">Choose Product</button>
+                <div class="dropdown-content">
+                  <a href="#" data-value="Pencil">Pencil</a>
+                  <a href="#" data-value="Eraser">Eraser</a>
+                  <a href="#" data-value="Pens">Pens</a>
+                  <!-- Add more products as needed -->
+                </div>
+              </div>
+            </td>
+            <td>
+              <div class="dropdown quantity-dropdown">
+                <button class="dropbtn">Choose Quantity</button>
+                <div class="dropdown-content">
+                  <a href="#" data-value="0">0</a>
+                  <a href="#" data-value="1">1</a>
+                  <a href="#" data-value="2">2</a>
+                  <a href="#" data-value="3">3</a>
+                  <a href="#" data-value="4">4</a>
+                  <a href="#" data-value="5">5</a>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="buttons">
+        <button id="addButton">ADD</button>
+        <button id="showOrderButton">Show Order</button>
+      </div>
+
+      <div id="orderSummary" class="order-summary" style="display: none">
+        <h2>Order Summary</h2>
+        <table id="orderTable">
+          <thead>
+            <tr>
+              <th>Product Name</th>
+              <th>Quantity</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Order items will be dynamically added here -->
+          </tbody>
+        </table>
+      </div>
+
+      <button
+        id="whatIsMyOrderButton"
+        class="order-button"
+        style="display: none"
+      >
+        What is my Order?
+      </button>
+    </div>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>
